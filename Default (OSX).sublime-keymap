@@ -1,0 +1,12 @@
+[
+		{ "keys": ["super+d"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
+		{ "keys": ["shift+super+up"], "command": "swap_line_up" },
+		{ "keys": ["shift+super+down"], "command": "swap_line_down" },
+
+		{ "keys": ["super+left"], "command": "move", "args": {"by": "subwords", "forward": false} },
+		{ "keys": ["super+right"], "command": "move", "args": {"by": "subword_ends", "forward": true} },
+		{ "keys": ["super+shift+left"], "command": "move", "args": {"by": "subwords", "forward": false, "extend": true} },
+		{ "keys": ["super+shift+right"], "command": "move", "args": {"by": "subword_ends", "forward": true, "extend": true} },
+]
+
+
