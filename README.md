@@ -1,2 +1,2 @@
 # Sublime Text Keybindings
-To keep it consistent with default Linux Keybindings (by key location, not necessarily by actual meta key namex
+To keep it consistent with default Linux Keybindings (by key location on keyboard, not necessarily by actual meta key names)
