@@ -1,12 +1,17 @@
+### git autocompletion
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
+
+[[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
+
 ### autocompletion for macos
 if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
 fi
 
-
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-
 
 ### Aliases
 
@@ -33,10 +38,22 @@ alias webpack-compile='webpack --config webpack.config.js'
 alias webpack-serve='webpack-dev-server --inline  --content-base public/'
 
 ### rbenv stuff
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 
 ### pretty git log
 alias gl='git log --graph --pretty="format:%C(yellow)%h%Cblue%d%Creset %s %C(white)"'
 
 ### dev
+alias raynor='cd ~/Development/viki/raynor'
 alias dev='cd ~/Development'
+
+alias thin-raynor='thin start --ssl -p 3022'
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+### git aware prompt 
+export GITAWAREPROMPT=~/.bash/git-aware-prompt
+source "${GITAWAREPROMPT}/main.sh"
+
+export PS1="\u@\h \W \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
+export SUDO_PS1="\[$bakred\]\u@\h\[$txtrst\] \w\$ "
